@@ -66,11 +66,12 @@ public class Main {
         {
             int var=arr2[i];
 
+
            for (int j = i; j < arr2.length; j++)
            {
                if (var>arr2[j])
                {
-                  arr2[i]=arr2[j]; arr2[j]=var; var=arr2[i];
+                  arr2[i]=arr2[j]; arr2[j]=var;  var=arr2[i];
                }
            }
 
