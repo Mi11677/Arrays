@@ -17,8 +17,8 @@ public class Main {
                 System.out.println("Вы в подвале");
                 return;
             }
-            System.out.println("Вы на " + floor +"этаже");
+            System.out.println("Вы на " + floor +" этаже");
             Elevator(floor-1);
-            System.out.println("Вы на " + floor +"этаже");
+            System.out.println("Вы на " + floor +" этаже");
         }
 }
