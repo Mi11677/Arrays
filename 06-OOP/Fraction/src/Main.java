@@ -18,11 +18,15 @@ public class Main {
         Fraction E = new Fraction(D);
         E.print();*/
 
-        int a = 2;
-        System.out.println(a);
+
         Fraction A = new Fraction(2,3,4);
-        System.out.println(A);
+
         Fraction B = new Fraction(3,4,5);
 
+        Fraction C =  Fraction.mul(A, B);
+        A.print();
+        B.print();
+        C.print();
+        System.out.println(C);
     }
 }

@@ -73,7 +73,50 @@ public class Fraction {
     }
 
 
+    //                  Arithmetics:
+
+     public static Fraction mul(Fraction l_value, Fraction r_value)
+     {
+        Fraction left = new Fraction(l_value);
+        Fraction right = new Fraction(r_value);
+        //---------------------------//
+
+         left.toImproper();
+         right.toImproper();
+         /*Fraction result = new Fraction();
+         result.setNumerator(left.numerator * right.numerator);
+         result.setDenominator(left.denominator * right.denominator);
+         result.toProper();
+         return result;*/
+        /* Fraction result = new Fraction(left.numerator * right.numerator,
+                 left.denominator* right.denominator);
+         result.toProper();
+         return result;  */
+         return new Fraction(
+
+             left.numerator * right.numerator,
+             left.denominator*right.denominator).toProper();
+     }
+     public static Fraction div(Fraction l_value, ) 
+
+
     //                      Methods
+
+
+    // Умножение
+
+    Fraction toImproper()
+    {
+        numerator+= integer*denominator;
+        integer = 0;
+        return this;
+    }
+    Fraction toProper()
+    {
+        integer+= numerator/denominator;
+        numerator %=denominator;
+        return this;  // Возвращаем измененный объект
+    }
 
     public void print()
     {
@@ -87,5 +130,7 @@ public class Fraction {
         else  if (integer == 0) System.out.print(0);
         System.out.println();
     }
+
+
 }
 
