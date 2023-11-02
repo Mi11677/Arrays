@@ -55,6 +55,15 @@ public class Student extends Human
         setAttendance(attendance);
         System.out.println("SConstructor:\t" + Integer.toHexString(hashCode()));
     }
+    public Student(Student other)
+    {
+        super(other);
+        this.speciality = other.speciality;
+        this.group = other.group;
+        this.rating = other.rating;
+        this.attendance = other.attendance;
+        System.out.println("SCopyConstructor:\t" + Integer.toHexString(hashCode()));
+    }
 
     @Override
     public String toString() {

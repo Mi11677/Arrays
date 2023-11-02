@@ -26,7 +26,7 @@ public class Teacher extends Human{
     }
     public String toString()
     {
-        return  super.toString() + " " + speciality + " " + experience;
+        return super.toString() + " " + speciality + " " + experience;
     }
 
 }
