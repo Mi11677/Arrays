@@ -66,8 +66,17 @@ public class Student extends Human
     }
 
     @Override
+    public void init(String[] values) {
+        super.init(values);
+        speciality = values[4];
+        group = values[5];
+        rating = Double.parseDouble(values[6].trim());
+        attendance = Double.parseDouble(values[7].trim());
+    }
+
+    @Override
     public String toString() {
-        return super.toString() + " "
-                + speciality + " " + group + " " +  rating + " " + attendance;
+        return super.toString() + ", "
+                + speciality + ", " + group + ", " +  rating + ", " + attendance;
     }
 }

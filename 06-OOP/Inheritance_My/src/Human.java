@@ -41,9 +41,14 @@ public class Human {
         this.age = other.age;
         System.out.println("HCopyConstructor:\t" + Integer.toHexString(hashCode()));
     }
-
+    public void init(String[] values)
+    {
+        lastName = values[1];
+        firstName = values[2];
+        age = Integer.parseInt(values[3].trim());
+    }
     public String toString()
     {
-        return lastName + " " + firstName + " " + age;
+        return lastName + ", " + firstName + ", " + age;
     }
 }
