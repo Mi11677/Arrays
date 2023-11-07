@@ -1,4 +1,4 @@
-import java.io.File;
+//import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.FileWriter;
@@ -7,16 +7,11 @@ import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-
-     /*   // TODO:
-        //В проект 'Inheritance' добавить классы
-        //    'Specialist' - дипломник, который защитил проект; (разобрали на уроке)
-        //    'Bookkeper'  - бухгалтер;
-        //    'Master'     - заведующий кафедрой;
+    public static void main(String[] args) throws IOException{ {
 
         System.out.println("Hello Inheritance!");
 
+ /*
         Human tommy = new Human("Vercetti", "Tomas", 30);
         System.out.println(tommy);
 
@@ -75,20 +70,21 @@ public class Main {
             System.out.println("File exists");
         }*/
 
-    Human[] group = load("group.txt");
+
+       /* Human[] group = load("group.txt");
         System.out.println(group.length);
         for (int i = 0; i < group.length; i++)
         {
             System.out.println(group[i]);
         }
-
+*/
 
     }
 
 
-    public static void save(Human[] group, String filename)throws IOException
+    /*public static void save(Human[] group, String filename)throws IOException
     {
-        /*File file = new File(filename);
+        *//*File file = new File(filename);
         System.out.println(file.getAbsoluteFile());
         file.delete();
         file.createNewFile();
@@ -104,7 +100,7 @@ public class Main {
 
         String command = "C:\\Program Files\\Notepad++\\notepad++ " + filename;
 
-        Process process = Runtime.getRuntime().exec(command);*/
+        Process process = Runtime.getRuntime().exec(command);*//*
     }
     public static Human[] load(String filename) throws FileNotFoundException
     {
@@ -120,9 +116,9 @@ public class Main {
             values[1] = values[1].replace("\t", "");
             for (int i = 0; i < values.length; i++)values[i].trim();
             //System.out.println(buffer);
-            /*System.out.print(values.length + ":\t");
+            *//*System.out.print(values.length + ":\t");
             for (int i= 0; i < values.length; i++) System.out.print(values[i] + "\t");
-            System.out.println();*/
+            System.out.println();*//*
             Human member = HumanFactory.Create(values[0]);
             member.init(values);
            // System.out.println(((Object) member).getClass().getSimpleName());
@@ -135,6 +131,11 @@ public class Main {
         Human[] group = new Human[al_group.size()];
         System.out.println(al_group.size());
         return al_group.toArray(group);
-    }
-
+    }*/
+    File file = new File("group.txt");
+    Human[] group = file.load();
+        for (int i = 0; i < group.length; i++) {
+            System.out.println(group[i]);
+        }
+}
 }
